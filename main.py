@@ -59,4 +59,8 @@ def factorial(n):
     return 1
   return n * factorial(n-1)
 
-print(factorial(3))
+
+
+num = int(input("choose a number greater than zero "))  
+
+print(factorial(num))
