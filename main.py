@@ -52,4 +52,11 @@ def power(num,pwr):
     return 1
   return num * power(num,pwr-1)
 
-print(power(8,1))
+
+
+def factorial(n):
+  if n == 1:
+    return 1
+  return n * factorial(n-1)
+
+print(factorial(3))
