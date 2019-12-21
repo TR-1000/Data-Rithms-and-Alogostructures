@@ -1,3 +1,4 @@
+
 #FizzBuzz
 
 numbers = [45, 22, 14, 65, 97, 72]
@@ -45,7 +46,7 @@ def fizzbuzz_enumerate(list):
   print(numbers)
 
 
-# RECURSION
+######## RECURSION #########
 
 def power(num,pwr):
   if pwr == 0:
@@ -61,6 +62,32 @@ def factorial(n):
 
 
 
-num = int(input("choose a number greater than zero "))  
+# num = int(input("choose a number greater than zero "))  
 
-print(factorial(num))
+# print(factorial(num))
+
+
+
+
+######### List Comprehention ##########
+
+numbers = [x for x in range(1,101)]
+squares = {num : num**2 for num in numbers}
+
+
+# import pprint
+# pp = pprint.PrettyPrinter(indent=4)
+# pp.pprint(squares)
+
+
+degrees = [ 12, 21, 15, 32 ]
+
+fahreheit = [(9/5)*x+32 for x in degrees]
+
+# n = int(input("Enter a number between 1 and 100: " ))
+# divs = [x for x in range(n,101) if x%n==0]
+# print(divs)
+
+# lambdas
+
+print((lambda x: x*2) (7))
