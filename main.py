@@ -114,7 +114,7 @@ class Cat:
 
 
 # 1 Instantiate the Cat object with 3 cats
-cat1 = Cat("rags", 7)
+cat1 = Cat("Rags", 7)
 cat2 = Cat("Sox", 2)
 cat3 = Cat("Boots", 1)
 
@@ -130,4 +130,23 @@ for cat in cats:
 
 # 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
 
-print(f"The oldest cat is {oldest_cat.name}.")
+# print(f"The oldest cat is {oldest_cat.name}.")
+
+# def say_name(cat):
+#   print(cat.name)
+
+# for cat in cats:
+#   say_name(cat)
+
+
+class Animal():
+
+  def make_sound(self):
+    print("ROAR")
+
+class Dog(Animal):
+  species = 'canine'
+
+shaster = Dog()
+
+shaster.species
