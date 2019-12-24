@@ -88,6 +88,19 @@ fahreheit = [(9/5)*x+32 for x in degrees]
 # divs = [x for x in range(n,101) if x%n==0]
 # print(divs)
 
-# lambdas
+####### lambdas #######
 
-print((lambda x: x*2) (7))
+#print((lambda x: x*2) (7))
+
+####### OOP ########
+
+class PlayerCharacter:
+  membership = True
+  def __init__(self, name, age):
+    self.name = name #attributes
+    self.age = age
+
+  def shout(self):
+    print(f'my name is {self.name}')
+
+
