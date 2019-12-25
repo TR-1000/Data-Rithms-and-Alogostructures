@@ -55,16 +55,29 @@ def power(num,pwr):
 
 
 
+
+
 def factorial(n):
   if n == 1:
     return 1
   return n * factorial(n-1)
 
-
-
 # num = int(input("choose a number greater than zero "))  
 
 # print(factorial(num))
+
+
+#Countdown
+counter = 10
+def inception():
+  global counter
+  if counter <= 0:
+    return
+
+  print (counter)  
+  counter -= 1  
+  return inception()
+
 
 
 
@@ -147,6 +160,15 @@ class Animal():
 class Dog(Animal):
   species = 'canine'
 
-shaster = Dog()
+# shaster = Dog()
 
-shaster.species
+fib_list = []
+for index in range(5 + 1):
+  if index == 0:
+    fib_list.append(index)
+  elif index == 1:
+    fib_list.append(index)
+  else:
+    fib_list.append(fib_list[index - 1] + fib_list[index - 2])
+
+print(fib_list[-1])    
