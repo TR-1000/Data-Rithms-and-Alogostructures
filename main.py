@@ -46,12 +46,40 @@ def fizzbuzz_enumerate(list):
   print(numbers)
 
 
+
+
+
+
+
+
 ######## RECURSION #########
 
 def power(num,pwr):
   if pwr == 0:
     return 1
   return num * power(num,pwr-1)
+
+
+
+
+fib_list = []
+for index in range(5 + 1):
+  if index == 0:
+    fib_list.append(index)
+  elif index == 1:
+    fib_list.append(index)
+  else:
+    fib_list.append(fib_list[index - 1] + fib_list[index - 2])
+
+# print(fib_list[-1])
+
+ 
+def fibonacci(n):
+  if n == 0:
+    return 0
+  elif n == 1:
+    return 1  
+  return fibonacci(n-1) + fibonacci(n-2) 
 
 
 
@@ -82,8 +110,13 @@ def inception():
 
 
 
+
+
+
+
 ######### List Comprehention ##########
 
+ 
 numbers = [x for x in range(1,101)]
 squares = {num : num**2 for num in numbers}
 
@@ -101,9 +134,28 @@ fahreheit = [(9/5)*x+32 for x in degrees]
 # divs = [x for x in range(n,101) if x%n==0]
 # print(divs)
 
+
+
+
+
+
+
+
+
+
+
 ####### lambdas #######
 
 #print((lambda x: x*2) (7))
+
+
+
+
+
+
+
+
+
 
 ####### OOP ########
 
@@ -162,13 +214,4 @@ class Dog(Animal):
 
 # shaster = Dog()
 
-fib_list = []
-for index in range(5 + 1):
-  if index == 0:
-    fib_list.append(index)
-  elif index == 1:
-    fib_list.append(index)
-  else:
-    fib_list.append(fib_list[index - 1] + fib_list[index - 2])
 
-print(fib_list[-1])    
