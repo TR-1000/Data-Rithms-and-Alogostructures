@@ -52,7 +52,7 @@ def fizzbuzz_enumerate(list):
 
 
 
-######## RECURSION #########
+######################################## RECURSION ########################################
 
 def power(num,pwr):
   if pwr == 0:
@@ -61,6 +61,7 @@ def power(num,pwr):
 
 
 
+# FIBONACCI
 
 fib_list = []
 for index in range(5 + 1):
@@ -83,8 +84,6 @@ def fibonacci(n):
 
 
 
-
-
 def factorial(n):
   if n == 1:
     return 1
@@ -95,30 +94,14 @@ def factorial(n):
 # print(factorial(num))
 
 
-#Countdown
-counter = 10
-def inception():
-  global counter
-  if counter <= 0:
-    return
-
-  print (counter)  
-  counter -= 1  
-  return inception()
 
 
+###################################### List Comprehention ######################################
 
-
-
-
-
-
-
-######### List Comprehention ##########
 
  
-numbers = [x for x in range(1,101)]
-squares = {num : num**2 for num in numbers}
+#numbers = [x for x in range(1,101)]
+#squares = {num : num**2 for num in numbers}
 
 
 # import pprint
@@ -126,9 +109,9 @@ squares = {num : num**2 for num in numbers}
 # pp.pprint(squares)
 
 
-degrees = [ 12, 21, 15, 32 ]
+#degrees = [ 12, 21, 15, 32 ]
 
-fahreheit = [(9/5)*x+32 for x in degrees]
+#fahreheit = [(9/5)*x+32 for x in degrees]
 
 # n = int(input("Enter a number between 1 and 100: " ))
 # divs = [x for x in range(n,101) if x%n==0]
@@ -137,81 +120,99 @@ fahreheit = [(9/5)*x+32 for x in degrees]
 
 
 
+# #1 Capitalize all of the pet names and print the list
+# my_pets = ['sisi', 'bibi', 'titi', 'carla', 'ryan', 'PAUL','kevin connors']
+
+# print([x.capitalize() for x in my_pets])
+
+# #2 Zip the 2 lists into a list of tuples, but sort the numbers from lowest to highest.
+# my_strings = ['a', 'b', 'c', 'd', 'e']
+# my_numbers = [5,4,3,2,1]
+
+# print(list(zip(my_strings, sorted(my_numbers))))
+
+# #3 Filter the scores that pass over 50%
+# scores = [73, 20, 65, 19, 76, 100, 88]
+
+# print([x for x in scores if x > 50])
 
 
 
 
 
 
-
-####### lambdas #######
+############################################ lambdas ############################################
 
 #print((lambda x: x*2) (7))
 
+#square = (lambda x: x*x)
+
+#print(list(map(square, my_numbers)))
+
+
+#Sort by second element in tuple
+a = [(0,2), (4,3), (9,9), (10, -1)]
+print(sorted(a, key=lambda tup: tup[1]))
 
 
 
 
 
 
+############################################ OOP ###########################################
+
+# class PlayerCharacter:
+#   membership = True
+#   def __init__(self, name, age):
+#     self.name = name #attributes
+#     self.age = age
+
+#   def shout(self):
+#     print(f'my name is {self.name} !')
+
+# player1=PlayerCharacter("TR-1000", 38)
+
+# #Given the below class:
+# class Cat:
+#     species = 'mammal'
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
 
+# # 1 Instantiate the Cat object with 3 cats
+# cat1 = Cat("Rags", 7)
+# cat2 = Cat("Sox", 2)
+# cat3 = Cat("Boots", 1)
 
-####### OOP ########
-
-class PlayerCharacter:
-  membership = True
-  def __init__(self, name, age):
-    self.name = name #attributes
-    self.age = age
-
-  def shout(self):
-    print(f'my name is {self.name} !')
-
-player1=PlayerCharacter("TR-1000", 38)
-
-#Given the below class:
-class Cat:
-    species = 'mammal'
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-
-# 1 Instantiate the Cat object with 3 cats
-cat1 = Cat("Rags", 7)
-cat2 = Cat("Sox", 2)
-cat3 = Cat("Boots", 1)
-
-# 2 Create a function that finds the oldest cat
-oldest_cat = {}
-oldest_age = 0
-cats = (cat1, cat2, cat3)
-for cat in cats:
-  if cat.age > oldest_age:
-    oldest_age = cat.age
-    oldest_cat = cat
-
-
-# 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
-
-# print(f"The oldest cat is {oldest_cat.name}.")
-
-# def say_name(cat):
-#   print(cat.name)
-
+# # 2 Create a function that finds the oldest cat
+# oldest_cat = {}
+# oldest_age = 0
+# cats = (cat1, cat2, cat3)
 # for cat in cats:
-#   say_name(cat)
+#   if cat.age > oldest_age:
+#     oldest_age = cat.age
+#     oldest_cat = cat
 
 
-class Animal():
+# # 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
 
-  def make_sound(self):
-    print("ROAR")
+# # print(f"The oldest cat is {oldest_cat.name}.")
 
-class Dog(Animal):
-  species = 'canine'
+# # def say_name(cat):
+# #   print(cat.name)
+
+# # for cat in cats:
+# #   say_name(cat)
+
+
+# class Animal():
+
+#   def make_sound(self):
+#     print("ROAR")
+
+# class Dog(Animal):
+#   species = 'canine'
 
 # shaster = Dog()
-
 
