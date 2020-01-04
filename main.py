@@ -96,13 +96,18 @@ def factorial(n):
 
 
 
-###################################### List Comprehention ######################################
+###################################### List, Dict Comprehention ######################################
 
+#Get duplicates
+some_list = ["a", "b", "c", "b", "d", "m", "n", "n"]
 
- 
+counts = {k:some_list.count(k) for k in some_list}
+duplicates = [x for x in counts if counts[x] > 1]
+
+#Dictionary
 #numbers = [x for x in range(1,101)]
 #squares = {num : num**2 for num in numbers}
-
+#squares = {num : num**2 for num in range(101)}
 
 # import pprint
 # pp = pprint.PrettyPrinter(indent=4)
@@ -151,8 +156,10 @@ def factorial(n):
 
 
 #Sort by second element in tuple
-a = [(0,2), (4,3), (9,9), (10, -1)]
-print(sorted(a, key=lambda tup: tup[1]))
+#a = [(0,2), (4,3), (9,9), (10, -1)]
+#print(sorted(a, key=lambda tup: tup[1]))
+#a.sort(key=lambda x: x[1])
+#print(a)
 
 
 
