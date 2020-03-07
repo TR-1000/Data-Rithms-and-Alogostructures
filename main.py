@@ -1,7 +1,7 @@
-
+  
 #FizzBuzz
 
-numbers = [45, 22, 14, 65, 97, 72]
+fizz_buzz_numbers = [45, 22, 14, 65, 97, 72]
 
 def fizzbuzz_classic(list):
   for n in list:
@@ -63,16 +63,19 @@ def power(num,pwr):
 
 # FIBONACCI
 
-fib_list = []
-for index in range(5 + 1):
-  if index == 0:
-    fib_list.append(index)
-  elif index == 1:
-    fib_list.append(index)
-  else:
-    fib_list.append(fib_list[index - 1] + fib_list[index - 2])
+def fib(num):
+  fib_list = []
+  for index in range(num + 1):
+    if index == 0:
+      fib_list.append(index)
+    elif index == 1:
+      fib_list.append(index)
+    else:
+      fib_list.append(fib_list[index - 1] + fib_list[index - 2])
+  return fib_list[-1]
 
-# print(fib_list[-1])
+
+
 
  
 def fibonacci(n):
@@ -99,10 +102,10 @@ def factorial(n):
 ###################################### List, Dict Comprehention ######################################
 
 #Get duplicates
-some_list = ["a", "b", "c", "b", "d", "m", "n", "n"]
+# some_list = ["a", "b", "c", "b", "d", "m", "n", "n"]
 
-counts = {k:some_list.count(k) for k in some_list}
-duplicates = [x for x in counts if counts[x] > 1]
+# counts = {k:some_list.count(k) for k in some_list}
+# duplicates = [x for x in counts if counts[x] > 1]
 
 #Dictionary
 #numbers = [x for x in range(1,101)]
@@ -222,4 +225,33 @@ duplicates = [x for x in counts if counts[x] > 1]
 #   species = 'canine'
 
 # shaster = Dog()
+
+
+
+############################################ Generators ###########################################
+
+# Fibonacci Generator
+
+def fib_generator(num):
+  a = 0
+  b = 1
+  for i in range(num):
+    yield a
+    # the value of "a" now changes to "a" + "b" and the value of "b" changes to the value "a" was
+    a, b = a + b, a
+
+# for i in fib_generator(1000):
+#   print(i)
+
+def make_int(s):
+  s = s.replace("$","")
+  if "." in s and "M" in s:
+    s = s.replace(".","").replace("M","00000")
+  else: 
+    s = s.replace("M","000000").replace("K","000")
+  return(s)
+  
+
+make_int("$11.5M")
+
 
