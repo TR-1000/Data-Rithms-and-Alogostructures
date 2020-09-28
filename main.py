@@ -1,4 +1,4 @@
-  
+
 #FizzBuzz
 
 fizz_buzz_numbers = [45, 22, 14, 65, 97, 72]
@@ -14,9 +14,9 @@ def fizzbuzz_classic(list):
     elif n%3 == 0:
         print("fizz")
 
-  print(list)    
+  print(list)
 
-  
+
 
 def fizzbuzz_range(list):
   for i in range(len(list)):
@@ -30,7 +30,7 @@ def fizzbuzz_range(list):
       list[i] = "buzz"
 
   print(list)
-  
+
 
 def fizzbuzz_enumerate(list):
   for i,n in enumerate(numbers):
@@ -42,7 +42,7 @@ def fizzbuzz_enumerate(list):
 
     elif n%5==0:
       list[i] = "buzz"
-  
+
   print(numbers)
 
 
@@ -77,13 +77,13 @@ def fib(num):
 
 
 
- 
+
 def fibonacci(n):
   if n == 0:
     return 0
   elif n == 1:
-    return 1  
-  return fibonacci(n-1) + fibonacci(n-2) 
+    return 1
+  return fibonacci(n-1) + fibonacci(n-2)
 
 
 
@@ -92,7 +92,7 @@ def factorial(n):
     return 1
   return n * factorial(n-1)
 
-# num = int(input("choose a number greater than zero "))  
+# num = int(input("choose a number greater than zero "))
 
 # print(factorial(num))
 
@@ -243,15 +243,21 @@ def fib_generator(num):
 # for i in fib_generator(1000):
 #   print(i)
 
+
+####################################################################################################
 def make_int(s):
   s = s.replace("$","")
   if "." in s and "M" in s:
     s = s.replace(".","").replace("M","00000")
-  else: 
+  else:
     s = s.replace("M","000000").replace("K","000")
   return(s)
-  
+
 
 make_int("$11.5M")
 
 
+object1 = {'value': 10}
+object2 = object1
+object3 = {'value': 10}
+print(object1 == object3)

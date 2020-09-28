@@ -9,21 +9,21 @@
 // 2 parameters - arrays - no size limit
 // return true or false
 
-const array1 = ['a', 'b', 'b'];
-const array2 = ['z', 'y', 'x'];
+const array1 = ['a', 'b', 'c', 'c'];
+const array2 = ['z', 'y', 'x', 'c'];
 
 function containsCommonItems(array1, array2) {
-  // convert arrays to sets to remove duplicates
-  let array1Set = new Set(array1);
-  let array2Set = new Set(array2);
+  // // convert arrays to sets to remove duplicates
+  // let array1Set = new Set(array1);
+  // let array2Set = new Set(array2);
+  //
+  // // get total unique elements for each array and add them
+  // let totalUniqueElementsInEachArray = new Set(array1).size + new Set(array2).size;
+  //
+  // // concatenate the arrays and convert the larger array to a set to remove duplicate numbers
+  // let totalUniqueElementsInCombinedArray = new Set(array1.concat(array2)).size
 
-  // get total unique elements for each array and add them
-  let totalUniqueElementsInEachArray = array1Set.size + array2Set.size;
-
-  // concatenate the arrays and convert the larger array to a set to remove duplicate numbers
-  let totalUniqueElementsInCombinedArray = new Set(array1.concat(array2)).size
-
-  if (totalUniqueElementsInEachArray > totalUniqueElementsInCombinedArray) {
+  if ((new Set(array1).size + new Set(array2).size) > new Set(array1.concat(array2)).size) {
     return true;
   }
   else {
