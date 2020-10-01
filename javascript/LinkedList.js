@@ -95,7 +95,7 @@ class LinkedList {
     this.get(index).value = value;
   }
 
-  delete(index) {
+  remove(index) {
     if (index < 0 || index > this.length-1) {
       return undefined;
     } else {
