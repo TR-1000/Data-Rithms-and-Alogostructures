@@ -113,16 +113,24 @@ class LinkedList {
   };
 
   getNodeValues() {
-    let count = 0;
+
     let nodeArray = [];
     let currentNode = this.head;
     do {
       nodeArray.push(currentNode.value);
       currentNode = currentNode.next;
-      count++
-    } while (count < this.length);
+    } while (currentNode != null);
     return nodeArray;
   };
+
+  reverse() {
+    let reverseArray = this.getNodeValues().reverse();
+    let newList = new LinkedList(reverseArray[0])
+    for(let i=1; i<reverseArray.length; i++) {
+      newList.append(reverseArray[i]);
+    };
+    return newList;
+  }
 
 
 };
@@ -141,3 +149,5 @@ console.log(myLinkedList.getNodeValues());
 
 myLinkedList.update(18, 2);
 console.log(myLinkedList.getNodeValues());
+
+console.log(myLinkedList.reverse());
