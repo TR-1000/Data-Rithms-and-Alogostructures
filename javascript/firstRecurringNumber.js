@@ -22,4 +22,5 @@ function firstRecurringNumber (arr) {
   return undefined;
 }
 
-firstRecurringNumber([2,5,1,6,3,4])
+
+console.log(firstRecurringNumber([2,3,4,5]));

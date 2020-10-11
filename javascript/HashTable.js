@@ -49,7 +49,7 @@ class HashTable {
     } else if (bucket.length == 1) {
       return bucket[0][1];
     }
-    // if item isn't found
+    // if key isn't found
     return undefined;
   }
 
