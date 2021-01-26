@@ -1,5 +1,7 @@
 let myString = "happy";
 
+
+
 function reverseString(str) {
   // Without cheating
   // let rev = "";
@@ -14,4 +16,4 @@ function reverseString(str) {
 
 
 
-console.log(reverseString("hi"));
+console.log(reverseString(myString));

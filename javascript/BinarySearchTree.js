@@ -74,7 +74,8 @@ tree.insert(170)
 tree.insert(15)
 tree.insert(1)
 console.log(JSON.stringify(traverse(tree.root), undefined, 4));
-console.log(tree.lookup(2))
+console.log(tree.lookup(2)) //false
+console.log(tree.lookup(20)) //true
 
 function traverse(node) {
   const tree = { value: node.value };
