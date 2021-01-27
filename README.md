@@ -1,2 +1,2 @@
 # Data-Rithms-and-Alogostructures
-Coding exercises
+Coding exercises, from FizzBuzz to data structures.
