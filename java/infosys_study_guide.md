@@ -21,52 +21,10 @@ not take up memory
 
 - These allow you to make single use of anonymous methods.
 
-**AWS experience**
+**String**
 
-- **RDS** - Relational Database Service: Creates a virtual, scalable, Relational Database.
-  - Creates the environment to host the database
-  - Has support for many types of relational databases. (PostgreSQL, Oracle DB, MySQL)
-- **EC2** - Elastic Compute Cloud: Virtual computer/server.
-  - Can run an application that is not local (where local computer uses local internet that can be unreliable )
-- **ELB** - **Elastic Load Balancing** : Gateway service, it will distribute incoming traffic across multiple instances of your application. So that there is less traffic throughout
-  - Configurable to decide how many instances it distributes to
-- **Security Groups** : These function like a firewall for instances (EC2, RDS etc) restricting traffic by IP, protocol or port.
-
-**Spring Module**
-
-Required Modules:
-
-- **Core** : Core functionality of spring. Contains the BeanFactory interface which is
-
-one of the IoC containers you can choose from.
-
-- **Beans** : Bean configuration and functionality.
-- **Context** : Provides the ApplicationContext interface which is the other IoC
-
-container. It is a child of the BeanFactory
-
-**Spring Annotations:**
-
-Annotation driven (Stereotype Annotations)
-
-- **@Component** - General/Generic (No relation to Angular)
-- **@Repository** - DAO/Repository layer classes
-- **@Service** - Service classes
-- **@Controller** - Controller (MVC) classes.
-
-**Linux experience**
-
-pwd - (present working directory) will show the path of the current directory you are in.
-
-cd - change directory, will move us into another directory.
-
-Note &quot;cd&quot; by itself will move us into the home directory. And &quot;cd ..&quot; will move up a
-
-single directory.
-
-ls - lists the contents of the directory.
-
-ps – shows which processes are running
+- Its an object over a primitive, and it&#39;s similar to an array of characters
+- They are immutable so if you change something in a string it creates a new string in the string pool. Unless you state new String then it will be in the heap.
 
 **Stack vs heap**
 
@@ -87,26 +45,58 @@ ps – shows which processes are running
 
 Stack memory size is smaller compared to heap memory.
 
-**Spring Boot**
+**Abstract Class vs. Interface**
 
-- Spring Boot is a Spring Project
-- Spring Boot is used to create stand-alone, production-grade, Spring based applications you can &quot;just run.&quot;
-- Spring Boot is opinionated: it makes decisions about how an application should be set up (the default configurations) so you can get it up and running with nearly just a push of a button.
-- Spring Boot has the mindset of Convention Over Configuration: This means that it is designed to work with the standard industry conventions , and as long as you follow those conventions it can abstract away configuration. Example DAOs use findById etc.
+- Abstract Class: can have abstract and concrete methods; can have a constructor
+- Interface: only have public and abstract methods; can't have a constructor; also thanks to Java 8, has default methods(used for backwards compatibility)
 
-**@Autowired**
+**Collections:**
 
-- Is Spring specific and located above where dependency injection would take place.
-  - Automagically&quot; determines the dependencies for you and provides them.
-  - **XML:**
-    - byType: Setter Injection based on the Bean&#39;s class or interface.
-    - byName: Setter Injection based on the Bean&#39;s name registered with the IoC Container.
-    - Constructor: uses constructor injection.
-  - **Annotations** :
+- The collections API is a group of data structures in an inheritance hierarchy. It exists in the java.util package.
+![](http://spiroprojects.com/webadmin/uploads/java-collection-hierarchy.png)
 
-**Sessions Thread Safe:**
+**Differences between all collection interfaces and classes**
 
-- Yes, Hibernate Sessions are thread safe because sessions factory can only produce 1 thread at a time. It also depends on how you are creating the session. openSession() is not thread safe, getCurrentSession() is thread safe.
+- **List(Interface)** : Lists are data structures that are ordered, they preserve the order of insertion, duplicates are allowed, and elements are accessed by their index which starts at 0.
+  - **ArrayList (class)**: It contains an array within it, but can resize that array
+
+dynamically to accept new values. Not Synchronized
+
+  - **LinkedList (class)**: this implements both List and Queue so it has all the methods from both interfaces. It is composed of nodes that do not necessarily have to sit next to each other in memory.
+  - **Vector(class)**: This is a List that is essentially a thread-safe arraylist. Synchronized
+  - **Stack (class)**: This is a Last-In-First-Out (LIFO) data structure. It is an older
+
+implementation of a LIFO structure and has been replaced with the ArrayDeque. Double ended queue(can pull from each end).
+
+- **Set(Interface)**: Not index driven, only allows unique elements, generally does not
+
+preserve the order of insertion.
+
+  - **HashSet(class)**: backed by a hashmap, guarantees no ordering when iterating (going through each element) through the set. Allows a single null value. Fast insertion and traversal but is impossible to find a value based on index.
+  - **TreeSet(class)** : Does maintain the order of the elements (sorted). This means that insertion and removal of elements is slower because ordering must be upheld. No null values since they can&#39;t be ordered.insertion and removal of elements is slower because ordering must be upheld. No null values since they can&#39;t be ordered.
+- **Queue (Interface)**: A data structure used when elements should be added and removed in a specific order. Unless specified elements are ordered in First-In-First-Out (FIFO) order.
+  - **ArrayDeque (class)**: (Deque is pronounced like &quot;deck&quot; but stands for double ended queue) It stores elements in a resizable array internally.
+    - Methods:
+      - pop(): functions like a Stack (FILO);
+      - push(): adds to the front of the ArrayDeque (used like a stack).
+      - peekFirst() - returns the first element but does not remove it.
+      - peekLast() - returns but does not remove the last element.
+      - pollFirst() - returns the first element and removes it from the
+      - deque.
+      - pollLast() returns the last element and removes it from the deque.
+      - addFirst() - adds the element to the front of the ArrayDeque
+      - addLast() - adds the element to the back of the ArrayDeque.
+
+**Maps** :
+
+**HashMap vs. TreeMap vs. HashTable**
+
+![](RackMultipart20210203-4-s9c3nf_html_4c58f0acb57d7743.png)
+
+**LinkedHashMap vs LinkedHashSet**
+
+-  [**LinkedHashMap**](https://www.geeksforgeeks.org/linkedhashmap-class-java-examples/) is just like [HashMap](https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/) with an additional feature of maintaining an order of elements inserted into it. HashMap provided the advantage of quick insertion, search, and deletion but it never maintained the track and order of insertion which the LinkedHashMap provides where the elements can be accessed in their insertion order.
+-  [**LinkedHashSet**](https://www.geeksforgeeks.org/linkedhashset-in-java-with-examples/) is an ordered version of [HashSet](https://www.geeksforgeeks.org/hashset-in-java/) that maintains a [doubly-linked List](https://www.geeksforgeeks.org/doubly-linked-list/) across all elements. LinkedHashSet lets us iterate through the elements in the order in which they were inserted.
 
 **Singleton Class How do you make one.**
 
@@ -133,12 +123,67 @@ for objects that will need to be sorted in multiple ways. The Comparator interfa
 
 is implemented by a separate class. This class then implements Comparator&#39;s
 
-&quot; compare() &quot; method.
+" compare() " method.
 
 **Priority Queue vs TreeSet**
 
 - **Priority Queue** – Under the queue interface which does not allow null values to be stored, does not focus on order but the head will always return largest or smallest element, Allows duplicate elements
 - **TreeSet** - Order matters and is sorted and allows you to access these indexes in sorted order. Does not allow duplicate elements
+
+##AWS
+**AWS experience**
+
+- **RDS** - Relational Database Service: Creates a virtual, scalable, Relational Database.
+  - Creates the environment to host the database
+  - Has support for many types of relational databases. (PostgreSQL, Oracle DB, MySQL)
+- **EC2** - Elastic Compute Cloud: Virtual computer/server.
+  - Can run an application that is not local (where local computer uses local internet that can be unreliable )
+- **ELB** - **Elastic Load Balancing** : Gateway service, it will distribute incoming traffic across multiple instances of your application. So that there is less traffic throughout
+  - Configurable to decide how many instances it distributes to
+- **Security Groups** : These function like a firewall for instances (EC2, RDS etc) restricting traffic by IP, protocol or port.
+
+
+##Spring
+**Spring Module**
+
+Required Modules:
+
+- **Core** : Core functionality of spring. Contains the BeanFactory interface which is
+
+one of the IoC containers you can choose from.
+
+- **Beans** : Bean configuration and functionality.
+- **Context** : Provides the ApplicationContext interface which is the other IoC
+
+container. It is a child of the BeanFactory
+
+**Spring Annotations:**
+
+Annotation driven (Stereotype Annotations)
+
+- **@Component** - General/Generic (No relation to Angular)
+- **@Repository** - DAO/Repository layer classes
+- **@Service** - Service classes
+- **@Controller** - Controller (MVC) classes.
+
+
+**Spring Boot**
+
+- Spring Boot is a Spring Project
+- Spring Boot is used to create stand-alone, production-grade, Spring based applications you can &quot;just run.&quot;
+- Spring Boot is opinionated: it makes decisions about how an application should be set up (the default configurations) so you can get it up and running with nearly just a push of a button.
+- Spring Boot has the mindset of Convention Over Configuration: This means that it is designed to work with the standard industry conventions , and as long as you follow those conventions it can abstract away configuration. Example DAOs use findById etc.
+
+**@Autowired**
+
+- Is Spring specific and located above where dependency injection would take place.
+  - Automagically&quot; determines the dependencies for you and provides them.
+  - **XML:**
+    - byType: Setter Injection based on the Bean&#39;s class or interface.
+    - byName: Setter Injection based on the Bean&#39;s name registered with the IoC Container.
+    - Constructor: uses constructor injection.
+  - **Annotations** :
+
 
 **Two main bullet points Spring, Spring MVC, Spring Boot**
 
@@ -192,21 +237,27 @@ is implemented by a separate class. This class then implements Comparator&#39;s
 
 **Check vs Uncheck**
 
-- **Checked (&quot;compile time&quot;)** Exceptions are so predictable that the compiler checks to ensure that we have accounted for them. If we have not, the Java compiler will refuse to compile our code.
+- **Checked ("compile time")** Exceptions are so predictable that the compiler checks to ensure that we have accounted for them. If we have not, the Java compiler will refuse to compile our code.
   - FileNotFoundException (I/O exception)
 - **Unchecked(Runtime)** exceptions are exceptions that are not checked for by the compiler.
   - NullPointerException
   - ArrayIndexOutOfBounds
 
-**SQL Injection**
-
-- **SQL Injection** is when a bad-actor enters SQL code instead of a normal
-
-input in order to mess with your database
 
 **Can you use multiple catch in a try catch block**
 
 - Yes, you can use multiple catch blocks in a try catch statement if it&#39;s from most specific to generic.
+
+
+##SQL
+**HAVING, GROUP BY, ORDER BY**
+
+- **ORDER BY** : Takes your queries return and sorts it.
+- **GROUP BY** : This divides the rows on the select statement and groups it so it can be ordered later.
+- **HAVING** : Specify a search condition for a group or aggregate result. Often used with GROUP BY
+
+**Outer join**
+- OUTER JOIN Returns relations that have no match in the other relation
 
 **View all employees from employee table**
 
@@ -214,11 +265,40 @@ input in order to mess with your database
 SELECT * FROM employee
 ```
 
+**What's the Query would Delete the Table?**
+```sql
+DROP TABLE table_name CASCADE
+```
+
+**How do you get a top 10 salaries from a table.**
+```sql
+SELECT saleries FROM employees
+ORDER BY saleries
+LIMIT 10;
+```
+
+**Selecting only unique items from a specific column in a table**
+```sql
+SELECT DISTINCT column_name FROM table_name;
+```
+
 **How would you format a One to Many relationship vs Many to Many**
+- One to Many - An individual record in one table can be associated with multiple records in a different table.
+- Many to Many - you would want to have a join table which house your FKs for your tables and records in both tables are associated with multiple records in the other.
 
-- **One to Many** - An individual record in one table can be associated with multiple records in a different table.
-- **Many to Many** - you would want to have a join table which housed your FK&#39;s for your tables and records in both tables are associated with multiple records in the other.
+**Modulus(%) as Wildcard Character in SQL**
+- Represents zero or more characters in a SQL query; used with the LIKE keyword
+- Finds all names starting with b
+```sql
+SELECT * FROM Employees
+WHERE first_name LIKE 'b%';
+```
 
+**SQL Injection**
+- SQL Injection is when a bad-actor enters SQL code instead of a normal input in order to mess with your database
+
+
+##Java
 **Whats a Class Loader**
 
 - Java Class Loader is a part of the Java Runtime Environment that dynamically loads Java classes into the Java Virtual Machine.
@@ -254,19 +334,11 @@ SELECT * FROM employee
 
 - Arrays are not part of the collections API because they are immutable
 
-**What the Query would Delete the Table?**
-
-- ```DROP TABLE table_name CASCADE```
-
 **Actuator**
 
 - this provides endpoints for us to monitor metrics and project information for our running applications. Was added to the Spring project.
 
-**How to connect Hibernate**
-
-- application.properties when using Spring
-- hibernate.cfg.xml if not using Spring
-
+## Spring
 **@Qualifier**
 
 - can be used to differentiate between Beans of the same type (class/interface) doing so however is poor practice and refactoring to remove the conflict is preferred.
@@ -289,11 +361,23 @@ SELECT * FROM employee
 
 - Global Session: was used for portlets (Also something we won&#39;t cover)
 
+**Difference between BeanFactory and ApplicationContext**
+
+- BeanFactory: Older version of Spring Container; lazily instantiates beans; requires a resource object configuration to be instantiated
+- ApplicationContext: Newer version; eagerly instantiates beans; provides support for annotations; sub-interface of BeanFactory
+
+
+##Hibernate/JPA
 **JPA:**
 
 - Java Persistence API which is Java&#39;s standard for ORMs.
 - The JPA is defined and contained in the javax.persistence package and it uses the EntityManager interface to create, read, and delete mapped entities in the database.
 - For our purposes, we need to know that our annotations are standardized by the JPA (e.g. @Entity will come from javax.persistence) but their implementation is done with Hibernate.
+
+**How to connect Hibernate**
+
+- application.properties when using Spring
+- hibernate.cfg.xml if not using Spring
 
 **Hibernate vs. JDBC**
 
@@ -304,6 +388,16 @@ SELECT * FROM employee
 - JDBC requires the developer to have specific knowledge of the database (table and column names) while Hibernate does not.
 - Hibernate also has caching mechanisms to reduce calls to the database. So it saves results that have occurred and if it repeats calls it will return result that is in the cache but also persists changes
 
+**Sessions Thread Safe:**
+
+- Yes, Hibernate Sessions are thread safe because sessions factory can only produce 1 thread at a time. It also depends on how you are creating the session. openSession() is not thread safe, getCurrentSession() is thread safe.
+
+**Session vs. SessionFactory**
+
+- SessionFactory: creates the sessions; one instance per app
+- Session: establishes connections to the database; one instance per transaction
+
+##Agile
 **Agile methodology**
 
 - requirements and solutions evolve through the collaboration of &quot;cross-functional&quot; teams
@@ -312,20 +406,8 @@ SELECT * FROM employee
   - Customer collaboration over contract negotiation. ( collaboration\&gt;negotiation )
   - Responding to change over following the plan. ( reactive vs. proactive ?, flexible vs strict )
 
-**String**
 
-- Its an object over a primitive, and it&#39;s similar to an array of characters
-- They are immutable so if you change something in a string it creates a new string in the string pool. Unless you state new String then it will be in the heap.
 
-**HAVING, GROUP BY, ORDER BY**
-
-- **ORDER BY** : Takes your queries return and sorts it.
-- **GROUP BY** : This divides the rows on the select statement and groups it so it can be ordered later.
-- **HAVING** : Specify a search condition for a group or aggregate result. Often used with GROUP BY
-
-**Outer join**
-
-- **OUTER JOIN-** Returns relations that have no match in the other relation
 
 **Soap vs Rest**
 
@@ -357,19 +439,8 @@ SELECT * FROM employee
   - 502 - Bad gateway
   - 504 - Gateway timeout took too long to process request
 
-**How do you get a top 10 salaries from a table.**
 
-```sql
-SELECT saleries FROM employees
-ORDER BY saleries
-LIMIT 10;
-```
-
-**Selecting only unique items from a specific column in a table**
-
-```sql
-SELECT DISTINCT column_name FROM table_name;
-```
+##Coding Challenges
 
 **Bubble Sort**
 
@@ -490,53 +561,6 @@ static int factorial(int n)
 ```
 
 
-**Collections:**
-
-- The collections API is a group of data structures in an inheritance hierarchy. It exists in the java.util package.
-![](http://spiroprojects.com/webadmin/uploads/java-collection-hierarchy.png)
-
-**Differences between all collection interfaces and classes**
-
-- **List(Interface)** : Lists are data structures that are ordered, they preserve the order of insertion, duplicates are allowed, and elements are accessed by their index which starts at 0.
-  - **ArrayList (class)**: It contains an array within it, but can resize that array
-
-dynamically to accept new values. Not Synchronized
-
-  - **LinkedList (class)**: this implements both List and Queue so it has all the methods from both interfaces. It is composed of nodes that do not necessarily have to sit next to each other in memory.
-  - **Vector(class)**: This is a List that is essentially a thread-safe arraylist. Synchronized
-  - **Stack (class)**: This is a Last-In-First-Out (LIFO) data structure. It is an older
-
-implementation of a LIFO structure and has been replaced with the ArrayDeque. Double ended queue(can pull from each end).
-
-- **Set(Interface)**: Not index driven, only allows unique elements, generally does not
-
-preserve the order of insertion.
-
-  - **HashSet(class)**: backed by a hashmap, guarantees no ordering when iterating (going through each element) through the set. Allows a single null value. Fast insertion and traversal but is impossible to find a value based on index.
-  - **TreeSet(class)** : Does maintain the order of the elements (sorted). This means that insertion and removal of elements is slower because ordering must be upheld. No null values since they can&#39;t be ordered.insertion and removal of elements is slower because ordering must be upheld. No null values since they can&#39;t be ordered.
-- **Queue (Interface)**: A data structure used when elements should be added and removed in a specific order. Unless specified elements are ordered in First-In-First-Out (FIFO) order.
-  - **ArrayDeque (class)**: (Deque is pronounced like &quot;deck&quot; but stands for double ended queue) It stores elements in a resizable array internally.
-    - Methods:
-      - pop(): functions like a Stack (FILO);
-      - push(): adds to the front of the ArrayDeque (used like a stack).
-      - peekFirst() - returns the first element but does not remove it.
-      - peekLast() - returns but does not remove the last element.
-      - pollFirst() - returns the first element and removes it from the
-      - deque.
-      - pollLast() returns the last element and removes it from the deque.
-      - addFirst() - adds the element to the front of the ArrayDeque
-      - addLast() - adds the element to the back of the ArrayDeque.
-
-**Maps** :
-
-**HashMap vs. TreeMap vs. HashTable**
-
-![](RackMultipart20210203-4-s9c3nf_html_4c58f0acb57d7743.png)
-
-**LinkedHashMap vs LinkedHashSet**
-
--  [**LinkedHashMap**](https://www.geeksforgeeks.org/linkedhashmap-class-java-examples/) is just like [HashMap](https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/) with an additional feature of maintaining an order of elements inserted into it. HashMap provided the advantage of quick insertion, search, and deletion but it never maintained the track and order of insertion which the LinkedHashMap provides where the elements can be accessed in their insertion order.
--  [**LinkedHashSet**](https://www.geeksforgeeks.org/linkedhashset-in-java-with-examples/) is an ordered version of [HashSet](https://www.geeksforgeeks.org/hashset-in-java/) that maintains a [doubly-linked List](https://www.geeksforgeeks.org/doubly-linked-list/) across all elements. LinkedHashSet lets us iterate through the elements in the order in which they were inserted.
 
 **IoC**
 
@@ -574,15 +598,8 @@ number1 = number2;
 
 number2 = temp;
 
-**Session vs. SessionFactory**
 
-- SessionFactory: creates the sessions; one instance per app
-- Session: establishes connections to the database; one instance per transaction
 
-**Difference between BeanFactory and ApplicationContext**
-
-- BeanFactory: Older version of Spring Container; lazily instantiates beans; requires a resource object configuration to be instantiated
-- ApplicationContext: Newer version; eagerly instantiates beans; provides support for annotations; sub-interface of BeanFactory
 
 **Decorator in Angular**
 
@@ -596,10 +613,7 @@ number2 = temp;
 
 - Dependency Injection: design pattern where class receives its dependencies from an external source instead of creating them itself
 
-**Abstract Class vs. Interface**
 
-- Abstract Class: can have abstract and concrete methods; can have a constructor
-- Interface: only have public and abstract methods; can&#39;t have a constructor; also thanks to Java 8, has default methods(used for backwards compatibility)
 
 **What is @Selector used for?**
 
@@ -630,15 +644,6 @@ number2 = temp;
 **How to make collections in Java thread safe**
 
 - Using the synchronizedCollection() method
-
-**Modulus(%) as Wildcard Character in SQL**
-
-- Represents zero or more characters in a SQL query; used with the LIKE keyword
-- Finds all names starting with b
-```sq;
-SELECT * FROM Employees
-WHERE first_name LIKE 'b%';
-```
 
 
 **Purpose of static keyword**
@@ -709,3 +714,18 @@ WHERE first_name LIKE 'b%';
 
 
 **What does lightweight program mean?**
+
+##Linux
+**Linux experience**
+
+pwd - (present working directory) will show the path of the current directory you are in.
+
+cd - change directory, will move us into another directory.
+
+Note "cd" by itself will move us into the home directory. And "cd .." will move up a
+
+single directory.
+
+ls - lists the contents of the directory.
+
+ps – shows which processes are running
