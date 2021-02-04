@@ -1,4 +1,4 @@
-package codingChallenges;
+package codingchallenges;
 
 /*
 write code to swap the first element with the last element. 
