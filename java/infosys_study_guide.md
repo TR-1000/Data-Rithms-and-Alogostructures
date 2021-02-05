@@ -41,7 +41,7 @@
 
 Stack memory size is smaller compared to heap memory.
 
-Static Memory Allocation is done before program execution. Dynamic Memory Allocation is done during program execution. In static memory allocation, once the memory is allocated, the memory size can not change. In dynamic memory allocation, when memory is allocated the memory size can be changed.
+Static Memory Allocation (Stack) is done before program execution. Dynamic Memory Allocation (Heap) is done during program execution. In static memory allocation, once the memory is allocated, the memory size can not change. In dynamic memory allocation, when memory is allocated the memory size can be changed.
 
 **Abstract Class vs. Interface**
 
@@ -56,19 +56,13 @@ Static Memory Allocation is done before program execution. Dynamic Memory Alloca
 **Differences between all collection interfaces and classes**
 
 - **List(Interface)** : Lists are data structures that are ordered, they preserve the order of insertion, duplicates are allowed, and elements are accessed by their index which starts at 0.
-  - **ArrayList (class)**: It contains an array within it, but can resize that array
-
-dynamically to accept new values. Not Synchronized
+  - **ArrayList (class)**: It contains an array within it, but can resize that array dynamically to accept new values. Not Synchronized
 
   - **LinkedList (class)**: this implements both List and Queue so it has all the methods from both interfaces. It is composed of nodes that do not necessarily have to sit next to each other in memory.
   - **Vector(class)**: This is a List that is essentially a thread-safe arraylist. Synchronized
-  - **Stack (class)**: This is a Last-In-First-Out (LIFO) data structure. It is an older
+  - **Stack (class)**: This is a Last-In-First-Out (LIFO) data structure. It is an older implementation of a LIFO structure and has been replaced with the ArrayDeque. Double ended queue(can pull from each end).
 
-implementation of a LIFO structure and has been replaced with the ArrayDeque. Double ended queue(can pull from each end).
-
-- **Set(Interface)**: Not index driven, only allows unique elements, generally does not
-
-preserve the order of insertion.
+- **Set(Interface)**: Not index driven, only allows unique elements, generally does not preserve the order of insertion.
 
   - **HashSet(class)**: backed by a hashmap, guarantees no ordering when iterating (going through each element) through the set. Allows a single null value. Fast insertion and traversal but is impossible to find a value based on index.
   - **TreeSet(class)** : Does maintain the order of the elements (sorted). This means that insertion and removal of elements is slower because ordering must be upheld. No null values since they can&#39;t be ordered.insertion and removal of elements is slower because ordering must be upheld. No null values since they can&#39;t be ordered.
@@ -102,9 +96,7 @@ The way we achieve this is have:
 
 - a private constructor
 - a private static field that will hold the instance of the class&#39;s object
-- a public method that will instantiate the object if none exists and return it, or, if
-
-one already exists, return the previously instantiated object.
+- a public method that will instantiate the object if none exists and return it, or, if one already exists, return the previously instantiated object.
 
 **Comparable vs Comparator**
 
@@ -115,11 +107,7 @@ one already exists, return the previously instantiated object.
     - 0 = the objects are equal
     - -i = the object is &quot;smaller&quot;
     - +i = the object is &quot;larger&quot;
-- Comparator (functional interface) is used to provide multiple sorting methods
-
-for objects that will need to be sorted in multiple ways. The Comparator interface
-
-is implemented by a separate class. This class then implements Comparator&#39;s
+- Comparator (functional interface) is used to provide multiple sorting methods for objects that will need to be sorted in multiple ways. The Comparator interface is implemented by a separate class. This class then implements Comparator.
 
 " compare() " method.
 
@@ -141,7 +129,7 @@ is implemented by a separate class. This class then implements Comparator&#39;s
 - **Security Groups** : These function like a firewall for instances (EC2, RDS etc) restricting traffic by IP, protocol or port.
 
 
-##Spring
+## Spring
 **Spring Module**
 
 Required Modules:
@@ -206,6 +194,8 @@ Annotation driven (Stereotype Annotations)
   - They decided effort estimation. (How much can get done in a sprint)
 - **Scrum Team** : Product owner + BAs+Developers+QA usually a total size of 5-9 people.
 
+
+## Microservices
 **Microservice and benefits.**
 
 - **Fault Isolation** - if a service crashes generally the rest of the application can continue.
