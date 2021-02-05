@@ -103,9 +103,7 @@ The way we achieve this is have:
     - 0 = the objects are equal
     - -i = the object is &quot;smaller&quot;
     - +i = the object is &quot;larger&quot;
-- Comparator (functional interface) is used to provide multiple sorting methods for objects that will need to be sorted in multiple ways. The Comparator interface is implemented by a separate class. This class then implements Comparator.
-
-" compare() " method.
+- Comparator (functional interface) is used to provide multiple sorting methods for objects that will need to be sorted in multiple ways. The Comparator interface is implemented by a separate class. This class then implements "compare() " method.
 
 **Wrapper Classes**
 - convert primitive data types into objects.
