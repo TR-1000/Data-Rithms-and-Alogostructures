@@ -7,11 +7,7 @@
   - Final method: Can&#39;t be overridden
   - Final variable: Can&#39;t be modified after initialization.
 - **Finally** is used in a try/catch block which handles exceptions/errors. It will always run no matter if an exception/error is caught or not.
-- **Finalize** is a method that will be run immediately before an object is removed from
-
-memory (i.e. garbage collected). (+)Allows for last minute methods or closes in order to
-
-not take up memory
+- **Finalize** is a method that will be run immediately before an object is removed from memory (i.e. garbage collected). (+)Allows for last minute methods or closes in order to not take up memory.
 
 **Functional interface**
 
@@ -44,6 +40,8 @@ not take up memory
 - LIFO
 
 Stack memory size is smaller compared to heap memory.
+
+Static Memory Allocation is done before program execution. Dynamic Memory Allocation is done during program execution. In static memory allocation, once the memory is allocated, the memory size can not change. In dynamic memory allocation, when memory is allocated the memory size can be changed.
 
 **Abstract Class vs. Interface**
 
