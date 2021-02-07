@@ -165,6 +165,7 @@ The way we achieve this is have:
 ![](https://www.w3spoint.com/wp-content/uploads/2018/04/Pasted-into-what-is-the-difference-between-hashmap-and-treemap-in-java.png)
 
 -  [**LinkedHashMap**](https://www.geeksforgeeks.org/linkedhashmap-class-java-examples/) is just like [HashMap](https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/) with an additional feature of maintaining an order of elements inserted into it. HashMap provided the advantage of quick insertion, search, and deletion but it never maintained the track and order of insertion which the LinkedHashMap provides where the elements can be accessed in their insertion order.
+
 -  [**LinkedHashSet**](https://www.geeksforgeeks.org/linkedhashset-in-java-with-examples/) is an ordered version of [HashSet](https://www.geeksforgeeks.org/hashset-in-java/) that maintains a [doubly-linked List](https://www.geeksforgeeks.org/doubly-linked-list/) across all elements. LinkedHashSet lets us iterate through the elements in the order in which they were inserted.
 
 
@@ -172,6 +173,7 @@ The way we achieve this is have:
 **Priority Queue vs TreeSet**
 
 - **Priority Queue** – Under the queue interface which does not allow null values to be stored, does not focus on order but the head will always return largest or smallest element, Allows duplicate elements
+
 - **TreeSet** - Order matters and is sorted and allows you to access these indexes in sorted order. Does not allow duplicate elements
 
 
@@ -179,7 +181,9 @@ The way we achieve this is have:
 **HAVING, GROUP BY, ORDER BY**
 
 - **ORDER BY** : Takes your queries return and sorts it.
+
 - **GROUP BY** : This divides the rows on the select statement and groups it so it can be ordered later.
+
 - **HAVING** : Specify a search condition for a group or aggregate result. Often used with GROUP BY
 
 **Outer join**
@@ -210,11 +214,14 @@ SELECT DISTINCT column_name FROM table_name;
 
 **How would you format a One to Many relationship vs Many to Many**
 - One to Many - An individual record in one table can be associated with multiple records in a different table.
+
 - Many to Many - you would want to have a join table which house your FKs for your tables and records in both tables are associated with multiple records in the other.
 
 **Modulus(%) as Wildcard Character in SQL**
-- Represents zero or more characters in a SQL query; used with the LIKE keyword
+- Represents zero or more characters in a SQL query; used with the LIKE keyword.
+
 - Finds all names starting with b
+
 ```sql
 SELECT * FROM Employees
 WHERE first_name LIKE 'b%';
@@ -259,6 +266,7 @@ Annotation driven (Stereotype Annotations)
 
 **Universal:**
 - Singleton (default) : There will only ever be one instance of the Bean with the Bean&#39;s class at one time.
+
 - Prototype : A new Bean is instantiated each time a Bean is called for. So that the beans are not overridden
 
 **WebAware:** ( how are these used??? )
@@ -271,8 +279,9 @@ Annotation driven (Stereotype Annotations)
 - Global Session: was used for portlets (Also something we won&#39;t cover)
 
 **Difference between BeanFactory and ApplicationContext**
-- BeanFactory: Older version of Spring Container; lazily instantiates beans; requires a resource object configuration to be instantiated
-- ApplicationContext: Newer version; eagerly instantiates beans; provides support for annotations; sub-interface of BeanFactory
+- BeanFactory: Older version of Spring Container; lazily instantiates beans; requires a resource object configuration to be instantiated.
+
+- ApplicationContext: Newer version; eagerly instantiates beans; provides support for annotations; sub-interface of BeanFactory.
 
 **@Autowired**
 - Is Spring specific and located above where dependency injection would take place.
