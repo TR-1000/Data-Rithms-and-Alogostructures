@@ -1,4 +1,4 @@
-package codingchallenges;
+package strings;
 
 public class ReverseString {
 	
