@@ -3,7 +3,7 @@ package strings;
 public class CountVowelsConsonants {
 
 	public static void getNumber(String str) {
-		str = str.toLowerCase();
+		str = str.toLowerCase().trim();
 		
 		String alphabet = "abcdefghijklmnopqrstuvwxyz";
 		String vowels = "aeiou";

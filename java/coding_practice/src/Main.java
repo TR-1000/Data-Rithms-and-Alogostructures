@@ -6,13 +6,11 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		String str = "Hello World";
-		String strRev = "";
-		
-		for (int i = str.length()-1; i >= 0; i--) {
-			strRev += str.charAt(i);
-		}
-		System.out.println(strRev);
+		int[] random = { 6, -4, 12, 0, -10 };
+		int x = 12;
+		int y = Arrays.binarySearch(random, x);
+		System.out.println(y);
+
 	}
 }
 
