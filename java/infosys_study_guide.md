@@ -614,6 +614,15 @@ number1 = number2;
 number2 = temp;
 
 
+## Angular
+**Components vs Directives**
+- Simply, Components is a UI control of the Applications. There are some major advantages when we go with Component-based like code reusability, enhance development speed and easy integration. Basically, Component is a class. Decorator (@Component) makes its a component and provides configuration metadata. Component is a tree structure for the application. It interacts with HTML file and performs the data-bind. Components are a subset of directives.
+The Syntax to create Component is given below.
+```
+ng generate component <component_name>  or ng g component <component_name>
+```
+- Directives are simply the instructions in DOM. It specifies how to place your components and business logic in Angular. It is also a class. But, Decorator (@ Directive) makes it a Directive to stand out and perform its operations.
+There are three types of Directives in Angular.
 
 **3 Types Directives:**
 - **Component Directive** : directs angular on how to process, instantiate and use components at runtime.
