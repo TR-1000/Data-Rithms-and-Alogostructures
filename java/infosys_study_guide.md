@@ -448,9 +448,9 @@ What would be the process if the user stories change?
 - **Scrum Team** : Product owner + BAs+Developers+QA usually a total size of 5-9 people.
 
 - requirements and solutions evolve through the collaboration of &quot;cross-functional&quot; teams
-  - Individuals and interactions over processes and tools. ( people\&gt;process )
-  - Working software over comprehensive documentation. ( working \&gt;comprehension )
-  - Customer collaboration over contract negotiation. ( collaboration\&gt;negotiation )
+  - Individuals and interactions over processes and tools. ( people > process )
+  - Working software over comprehensive documentation. ( working > comprehension )
+  - Customer collaboration over contract negotiation. ( collaboration > negotiation )
   - Responding to change over following the plan. ( reactive vs. proactive ?, flexible vs strict )
 
 
@@ -485,11 +485,11 @@ void bubbleSort(int arr[])
 
         int n = arr.length;
 
-        for (int i = 0; i \&lt; n-1; i++)
+        for (int i = 0; i < n-1; i++)
 
-            for (int j = 0; j \&lt; n-i-1; j++)
+            for (int j = 0; j < n-i-1; j++)
 
-                if (arr[j] \&gt; arr[j+1])
+                if (arr[j] > arr[j+1])
 
                 {
 
@@ -616,11 +616,11 @@ number2 = temp;
 
 
 **3 Types Directives:**
-- **Component Directive** : directs angular on how to process instantiate and use components at runtime.
+- **Component Directive** : directs angular on how to process, instantiate and use components at runtime.
 
 - **Structural Directives** : These will change the structure of the DOM elements.
-They generally are declared with an &quot;\*&quot; before the &quot;ng&quot;.
-  - Eg \*ngFor, \*ngIf
+They generally are declared with an "*" before the "ng".
+  - Eg *ngFor, *ngIf
 - **Attribute Directives** : Used to change the look or behavior of an element.
   - Eg ngModel used to change behavior , ngStyle
 
