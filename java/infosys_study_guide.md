@@ -2,15 +2,15 @@
 
 **Structure of JVM**
 
-- **JVM** - Java Virtual Machine =\&gt; Runs your code (runs the compiled bytecode) in a virtual environment that is the same across devices.
-  - **JIT** - Just-In-Time Compiler =\&gt; Turns Bytecode into machine code essentially line by line.
+- **JVM** - Java Virtual Machine => Runs your code (runs the compiled bytecode) in a virtual environment that is the same across devices.
+  - **JIT** - Just-In-Time Compiler => Turns Bytecode into machine code essentially line by line.
 
 **Final, finally, finalize**
 
 - **Final** : three implementations &quot;unchangeable&quot;
   - Final class: No subclasses can extend from this class.
-  - Final method: Can&#39;t be overridden
-  - Final variable: Can&#39;t be modified after initialization.
+  - Final method: Can't be overridden
+  - Final variable: Can't be modified after initialization.
 - **Finally** is used in a try/catch block which handles exceptions/errors. It will always run no matter if an exception/error is caught or not.
 - **Finalize** is a method that will be run immediately before an object is removed from memory (i.e. garbage collected). (+)Allows for last minute methods or closes in order to not take up memory.
 
@@ -28,7 +28,7 @@
 
 **String**
 
-- Its an object over a primitive, and it&#39;s similar to an array of characters
+- Its an object over a primitive, and it's similar to an array of characters
 - They are immutable so if you change something in a string it creates a new string in the string pool. Unless you state new String then it will be in the heap.
 
 **Stack vs heap**
@@ -66,7 +66,7 @@ Static Memory Allocation (Stack) is done before program execution. Dynamic Memor
 The way we achieve this is have:
 
 - a private constructor
-- a private static field that will hold the instance of the class&#39;s object
+- a private static field that will hold the instance of the class object
 - a public method that will instantiate the object if none exists and return it, or, if one already exists, return the previously instantiated object.
 
 
@@ -159,7 +159,7 @@ The way we achieve this is have:
   **How to make collections in Java thread safe**
   - Using the synchronizedCollection() method
 
-##[**HashMap vs. TreeMap vs. HashTable**](https://www.w3spoint.com/hashmaplinkedhashmap-treemap-hashtable-java)
+## [**HashMap vs. TreeMap vs. HashTable**](https://www.w3spoint.com/hashmaplinkedhashmap-treemap-hashtable-java)
 
 **LinkedHashMap vs LinkedHashSet**
 ![](https://www.w3spoint.com/wp-content/uploads/2018/04/Pasted-into-what-is-the-difference-between-hashmap-and-treemap-in-java.png)
@@ -177,7 +177,7 @@ The way we achieve this is have:
 - **TreeSet** - Order matters and is sorted and allows you to access these indexes in sorted order. Does not allow duplicate elements
 
 
-##SQL
+## SQL
 **HAVING, GROUP BY, ORDER BY**
 
 - **ORDER BY** : Takes your queries return and sorts it.
@@ -321,8 +321,8 @@ Annotation driven (Stereotype Annotations)
   - Spring Boot is opinionated: it makes decisions about how an application should be set up (the default configurations) so you can get it up and running with nearly just a push of a button.
   - Spring Boot has the mindset of Convention Over Configuration: This means that it is designed to work with the standard industry conventions , and as long as you follow those conventions it can abstract away configuration. Example DAOs use findById etc.
 
-  **Actuator**
-  Spring Boot Actuator is a sub-project of the Spring Boot Framework. It includes a number of additional features that help us to monitor and manage the Spring Boot application. It contains the actuator endpoints (the place where the resources live). We can use HTTP and JMX endpoints to manage and monitor the Spring Boot application. If we want to get production-ready features in an application, we should use the Spring Boot actuator.
+  ## **Actuator**
+Spring Boot Actuator is a sub-project of the Spring Boot Framework. It includes a number of additional features that help us to monitor and manage the Spring Boot application. It contains the actuator endpoints (the place where the resources live). We can use HTTP and JMX endpoints to manage and monitor the Spring Boot application. If we want to get production-ready features in an application, we should use the Spring Boot actuator.
 
 
 ## Microservices
@@ -395,20 +395,7 @@ Annotation driven (Stereotype Annotations)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-##Hibernate/JPA
+## Hibernate/JPA
 **Benefits of Hibernate**
 
 - Handles a lot of the querying
@@ -448,7 +435,7 @@ Annotation driven (Stereotype Annotations)
 - Lazy: gives a proxy object instead of going to the database until your code actually calls for the object; only works while the object is persistent; once it becomes detached there is no longer a Session to replace the proxy.
 - Eager: returns the dependent object immediately with no proxy. This is generally safer
 
-##Agile
+## Agile
 **Agile methodology:**
 What would be the process if the user stories change?
 
@@ -467,7 +454,7 @@ What would be the process if the user stories change?
   - Responding to change over following the plan. ( reactive vs. proactive ?, flexible vs strict )
 
 
-##AWS
+## AWS
 **AWS experience**
 - **RDS** - Relational Database Service: Creates a virtual, scalable, Relational Database.
   - Creates the environment to host the database
@@ -487,7 +474,7 @@ single directory.
 - ps – shows which processes are running
 
 
-##Coding Challenges
+## Coding Challenges
 
 **Bubble Sort**
 
