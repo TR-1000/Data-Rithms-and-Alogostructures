@@ -321,8 +321,11 @@ Annotation driven (Stereotype Annotations)
   - Spring Boot is opinionated: it makes decisions about how an application should be set up (the default configurations) so you can get it up and running with nearly just a push of a button.
   - Spring Boot has the mindset of Convention Over Configuration: This means that it is designed to work with the standard industry conventions , and as long as you follow those conventions it can abstract away configuration. Example DAOs use findById etc.
 
-  ## **Actuator**
+ **Actuator**
 Spring Boot Actuator is a sub-project of the Spring Boot Framework. It includes a number of additional features that help us to monitor and manage the Spring Boot application. It contains the actuator endpoints (the place where the resources live). We can use HTTP and JMX endpoints to manage and monitor the Spring Boot application. If we want to get production-ready features in an application, we should use the Spring Boot actuator.
+
+**What is @Selector used for?**
+- Used on a parameter of an @Endpoint method to indicate that the parameter is used to select a subset of the endpoint's data
 
 
 ## Microservices
@@ -636,19 +639,18 @@ They generally are declared with an "*" before the "ng".
 **Decorator in Angular**
 - Like an annotation in Java; provides additional functionality
 
-**What is @Selector used for?**
-- Used on a parameter of an @Endpoint method to indicate that the parameter is used to select a subset of the endpoint&#39;s data
 
 **Two types of building up forms in Angular**
 - Template driven form-built out in HTML
 - Reactive form-built out in TS(TypeScript)
-
 
 **What are some disadvantages of Angular?**
 
 **Can Angular be multipage?**
 
 **What is Angular?**
+
+---
 
 **What is Multithreading?**
 
