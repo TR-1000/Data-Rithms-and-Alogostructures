@@ -1,4 +1,4 @@
-'''Fibonacci Generator'''
+# FIBONACCI GENERATOR
 
 def fib_generator(num):
   a = 0
@@ -11,5 +11,6 @@ def fib_generator(num):
 # loop over generator
 def get_fib_array(n):
     return [i for i in fib_generator(n)]
+    
 # print out array
 print(get_fib_array(6))

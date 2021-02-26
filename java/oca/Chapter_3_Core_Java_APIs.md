@@ -1,6 +1,6 @@
 Chapter 3 ■ Core Java APIs
 ---
-#####1. What is output by the following code? (Choose all that apply)
+##### 1. What is output by the following code? (Choose all that apply)
 ```
 1: public class Fish {
 2: public static void main(String[] args) {
@@ -31,7 +31,7 @@ options A and D. The variable defined on line 5 would be the string "5", and bot
 
 ---
 
-#####2. Which of the following are output by this code? (Choose all that apply)
+##### 2. Which of the following are output by this code? (Choose all that apply)
 ```
 3: String s = "Hello";
 4: String t = new String(s);
@@ -59,7 +59,7 @@ Finally, line 8 compares one object from the string pool with one that was expli
 
 ---
 
-#####3. Which are true statements? (Choose all that apply)
+##### 3. Which are true statements? (Choose all that apply)
 ```
 A. An immutable object can be modified.
 B. An immutable object cannot be modified.
@@ -74,7 +74,7 @@ Immutable objects can be garbage collected just like mutable objects. String is 
 
 ---
 
-#####4. What is the result of the following code?
+##### 4. What is the result of the following code?
 ```
 7: StringBuilder sb = new StringBuilder();
 8: sb.append("aaa").insert(1, "bb").insert(4, "ccc");
@@ -94,7 +94,7 @@ sb contains abbbaa. That result is passed to the final insert(), which inserts a
 
 ---
 
-#####5. What is the result of the following code?
+##### 5. What is the result of the following code?
 ```
 2: String s1 = "java";
 3: StringBuilder s2 = new StringBuilder("java");
@@ -115,7 +115,7 @@ object reference equality. It is hoping you will miss the fact that line 4 does 
 
 ---
 
-#####6. What is the result of the following code?
+##### 6. What is the result of the following code?
 ```
 public class Lion {
  public void roar(String roar1, StringBuilder roar2) {
@@ -143,7 +143,7 @@ existing character sequence along with returning a reference to the same object.
 
 ---
 
-#####7. Which are the results of the following code? (Choose all that apply)
+##### 7. Which are the results of the following code? (Choose all that apply)
 ```
 String letters = "abcdef";
 System.out.println(letters.length());
@@ -164,7 +164,7 @@ corresponds to 1 past the end of the array. A StringIndexOutOfBoundsException is
 thrown for the last line.
 
 ---
-#####8. Which are the results of the following code? (Choose all that apply)
+##### 8. Which are the results of the following code? (Choose all that apply)
 ```
 String numbers = "012345678";
 System.out.println(numbers.substring(1, 3));
@@ -188,7 +188,7 @@ String.
 
 ---
 
-#####9. What is the result of the following code?
+##### 9. What is the result of the following code?
 ```
 3: String s = "purr";
 4: s.toUpperCase();
@@ -213,7 +213,7 @@ characters to s and now have a String of length 8.
 
 ---
 
-#####10. What is the result of the following code? (Choose all that apply)
+##### 10. What is the result of the following code? (Choose all that apply)
 ```
 13: String a = "";
 14: a += 2;
@@ -239,7 +239,7 @@ and the other comes from building using String operations.
 
 ---
 
-#####11. What is the result of the following code?
+##### 11. What is the result of the following code?
 ```
 4: int total = 0;
 5: StringBuilder letters = new StringBuilder("abcdefg");
@@ -261,7 +261,7 @@ indexes to be specified in reverse order and the code throws a StringIndexOutOfB
 
 ---
 
-#####12. What is the result of the following code? (Choose all that apply)
+##### 12. What is the result of the following code? (Choose all that apply)
 ```
 StringBuilder numbers = new StringBuilder("0123456789");
 numbers.delete(2, 8);
@@ -282,7 +282,7 @@ sign at index 2, resulting in 01+89–.
 
 ---
 
-#####13. What is the result of the following code?
+##### 13. What is the result of the following code?
 ```
 StringBuilder b = "rumble";
 b.append(4).deleteCharAt(3).delete(3, b.length() - 1);
@@ -303,7 +303,7 @@ positions for no reason at all.
 
 ---
 
-#####14. Which of the following can replace line 4 to print "avaJ"? (Choose all that apply)
+##### 14. Which of the following can replace line 4 to print "avaJ"? (Choose all that apply)
 ```
 3: StringBuilder puzzle = new StringBuilder("Java");
 4: // INSERT CODE HERE
@@ -324,7 +324,7 @@ based and length() counts starting with 1.
 
 ---
 
-#####15. Which of these array declarations is not legal? (Choose all that apply)
+##### 15. Which of these array declarations is not legal? (Choose all that apply)
 ```
 A. int[][] scores = new int[5][];
 B. Object[][][] cubbies = new Object[3][0][5];
@@ -341,7 +341,7 @@ Remember that it is normal to see on the exam types you might not have learned. 
 aren’t expected to know anything about them.
 
 ---
-#####16. Which of these compile when replacing line 8? (Choose all that apply)
+##### 16. Which of these compile when replacing line 8? (Choose all that apply)
 ```
 7: char[]c = new char[2];
 8: // INSERT CODE HERE
@@ -358,7 +358,7 @@ allowed.
 
 ---
 
-#####17. Which of these compile when replacing line 8? (Choose all that apply)
+##### 17. Which of these compile when replacing line 8? (Choose all that apply)
 ```
 7: ArrayList l = new ArrayList();
 8: // INSERT CODE HERE
@@ -373,7 +373,7 @@ G. None of the above.
 ```
 F. The ArrayList class defines a method called size().
 
-#####18. Which of the following are true? (Choose all that apply)
+##### 18. Which of the following are true? (Choose all that apply)
 ```
 A. An array has a fixed size.
 B. An ArrayList has a fixed size.
@@ -387,7 +387,7 @@ A, C, D, E. An array is not able to change size and can have multiple dimensions
 an array and ArrayList are ordered and have indexes. Neither is immutable. The elements can change in value.
 
 ---
-#####19. Which of the following are true? (Choose all that apply)
+##### 19. Which of the following are true? (Choose all that apply)
 ```
 A. Two arrays with the same content are equal.
 B. Two ArrayLists with the same content are equal.
@@ -403,7 +403,7 @@ error. The code will throw an exception at runtime, though.
 
 ---
 
-#####20. What is the result of the following statements?
+##### 20. What is the result of the following statements?
 ```
 6: List<String> list = new ArrayList<String>();
 7: list.add("one");
@@ -422,7 +422,7 @@ objects can be added to list and 7 is an int.
 
 ---
 
-#####21. What is the result of the following statements?
+##### 21. What is the result of the following statements?
 ```
 3: ArrayList<Integer> values = new ArrayList<>();
 4: values.add(4);
@@ -445,7 +445,7 @@ C. After line 4, values has one element (4). After line 5, values has two elemen
 
 ---
 
-#####22. What is the result of the following?
+##### 22. What is the result of the following?
 ```
 int[] random = { 6, -4, 12, 0, -10 };
 int x = 12;
@@ -462,7 +462,7 @@ F. The code does not compile.
 D. The code compiles and runs fine. However, an array must be sorted for binarySearch() to return a meaningful result.
 
 ---
-#####23. What is the result of the following?
+##### 23. What is the result of the following?
 ```
 4: List<Integer> list = Arrays.asList(10, 4, -1, 5);
 5: Collections.sort(list);
@@ -482,7 +482,7 @@ prints the first element, which is now –1.
 
 ---
 
-#####24. What is the result of the following?
+##### 24. What is the result of the following?
 ```
 6: String [] names = {"Tom", "Dick", "Harry"};
 7: List<String> list = names.asList();
@@ -500,7 +500,7 @@ answer would be option A.
 
 ---
 
-#####25. What is the result of the following?
+##### 25. What is the result of the following?
 ```
 List<String> hex = Arrays.asList("30", "8", "3A", "FF");
 Collections.sort(hex);
@@ -524,7 +524,7 @@ Therefore, we get –2–1, which is –3.
 
 ---
 
-#####26. Which of the following are true statements about the following code? (Choose all that apply)
+##### 26. Which of the following are true statements about the following code? (Choose all that apply)
 ```
 4: List<Integer> ages = new ArrayList<>();
 5: ages.add(Integer.parseInt("5"));
@@ -546,7 +546,7 @@ int, it fails and throws a NullPointerException.
 
 ---
 
-#####27. What is the result of the following?
+##### 27. What is the result of the following?
 ```
 List<String> one = new ArrayList<String>();
 one.add("abc");
@@ -571,7 +571,7 @@ same elements in the same order.
 
 ---
 
-#####28. Which of the following can be inserted into the blank to create a date of June 21, 2014?
+##### 28. Which of the following can be inserted into the blank to create a date of June 21, 2014?
 ```
 (Choose all that apply)
 import java.time.*;
@@ -594,7 +594,7 @@ date.
 
 ---
 
-#####29. What is the output of the following code?
+##### 29. What is the output of the following code?
 ```
 LocalDate date = LocalDate.parse("2018-04-30", DateTimeFormatter.ISO_LOCAL_
 DATE);
@@ -611,7 +611,7 @@ E. A runtime exception is thrown.
 D. A LocalDate does not have a time element. Therefore, it has no method to add
 hours and the code does not compile.
 
-#####30. What is the output of the following code?
+##### 30. What is the output of the following code?
 ```
 LocalDate date = LocalDate.of(2018, Month.APRIL, 40);
 System.out.println(date.getYear() + " " + date.getMonth() + " "
@@ -628,7 +628,7 @@ April—or any other month for that matter.
 
 ---
 
-#####31. What is the output of the following code?
+##### 31. What is the output of the following code?
 ```
 LocalDate date = LocalDate.of(2018, Month.APRIL, 30);
 date.plusDays(2);
@@ -647,7 +647,7 @@ B. The date starts out as April 30, 2018. Since dates are immutable and the plus
 correct.
 
 ---
-#####32. What is the output of the following code?
+##### 32. What is the output of the following code?
 ```
 LocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);
 Period p = Period.of(1, 2, 3);
@@ -665,7 +665,7 @@ G. A runtime exception is thrown.
 E. Even though d has both date and time, the formatter only outputs time.
 
 ---
-#####33. What is the output of the following code?
+##### 33. What is the output of the following code?
 ```
 LocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);
 Period p = Period.ofDays(1).ofYears(2);

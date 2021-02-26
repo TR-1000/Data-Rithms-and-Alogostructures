@@ -3,12 +3,12 @@ package recursion;
 public class Factorial {
 	
 	public static int iterative(int n) {
-		int p = 1;
+		int f = 1;
 		for (int i=n; i>=1; i--) {
 			System.out.println("iterating... " + i);
-			p*=i;
+			f*=i;
 		}
-		return p;
+		return f;
 	}
 	
 	public static int iterativeWhile(int n) {		

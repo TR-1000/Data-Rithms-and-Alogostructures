@@ -5,3 +5,5 @@ def factorial(n):
         total*=n
     print(total)
     return total
+
+factorial(0)
