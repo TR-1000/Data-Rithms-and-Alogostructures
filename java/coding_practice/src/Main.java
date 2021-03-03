@@ -1,53 +1,31 @@
-import java.time.*;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+
 
 public class Main {
-	public static int fib(int n) {
-		if(n==0)
-			return 0;
+	static String[] urls;
+	static BufferedImage image;
+	public static void main(String[] args) throws MalformedURLException {
+		int count = 0;
+		String[] urls = {"https://ap.rdcpix.com/2484311338/5ac20c791405fc96bdc379d36a169af1l-m0od-w1024_h768.jpg", "https://ap.rdcpix.com/392183360/5ac20c791405fc96bdc379d36a169af1l-m1od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m3950118025od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m3671716312od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m353306170od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2460020855od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m650285137od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2319460631od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2011767637od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2781957482od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m3161462152od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m1257152087od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m3657353195od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2098954081od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2115423644od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2408183071od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2437914846od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m1415953395od-w1024_h768.jpg", "https://ap.rdcpix.com/5ac20c791405fc96bdc379d36a169af1l-m2049927616od-w1024_h768.jpg"};
 		
-		if(n==1)
-			return 1;
-		
-		return fib(n-1) + fib(n-2);
-	}
-	
-	public static int factorial(int n) {
-		int f = 1;
-		
-		for(int i=n; i>0; i--) {
-			f*=i;
-			System.out.println(f);
+		try {
+			for (String link : urls) {
+				URL url = new URL(link);	
+				image = ImageIO.read(url);
+				ImageIO.write(image, "png", new File(".\\"+count+".png"));
+				System.out.println(count);
+				count++;
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		return f;
-	}
-	
-	public static boolean isPrime(int n) {
-	
-		//loop from 2 to n/2 because a number is not divisible by more than its half.
-		for(int i = 2; i <= n/2; i++) {
-			 //check if the n is divisible by any number in the given range 2 to n/2
-			if(n%i==0)
-				return false;
-		}
-		return true;
-	}
-	
-	
-	public static void main(String[] args) {
-		
-		LocalDate date = LocalDate.parse("2018-04-30", DateTimeFormatter.ISO_LOCAL_DATE);
-				date.plusDays(2);
-				date.plusHours(3);
-				System.out.println(date.getYear() + " " + date.getMonth() + " "
-				+ date.getDayOfMonth());
-	
 	}
 }
 
