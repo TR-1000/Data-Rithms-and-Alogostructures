@@ -1,0 +1,10 @@
+[0mGET /packages [33m404 [0m216.770 ms - 1389[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.902 ms - -[0m
+[0mGET /packages [33m404 [0m12.687 ms - 1389[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.519 ms - -[0m
+[0mGET /packages [33m404 [0m10.048 ms - 1389[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.389 ms - -[0m
+[0mGET /packages [33m404 [0m14.582 ms - 1389[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.465 ms - -[0m
+[0mGET /packages [36m304 [0m5.404 ms - -[0m
+[0mGET /packages [36m304 [0m0.659 ms - -[0m

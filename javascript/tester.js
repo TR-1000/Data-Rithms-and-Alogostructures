@@ -1,0 +1,7 @@
+
+tester = () => {
+  alert("Hello!");
+}
+
+
+tester()
