@@ -1,6 +1,0 @@
-class ApplicationFacade implements ResourceController, ApplicationManager
-{
-    public void deactivate() {
-        ApplicationManager.super.deactivate();
-    }
-}

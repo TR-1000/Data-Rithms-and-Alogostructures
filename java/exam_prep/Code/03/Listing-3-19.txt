@@ -1,4 +1,0 @@
-List<String> filteredList = items.parallelStream().
-        filter(e -> (e.startsWith(prefix))).
-        filter(e -> (e.endsWith(suffix))).
-        collect(Collectors.toList());

@@ -1,1 +1,0 @@
-assert systemValid : "Invalid System State";

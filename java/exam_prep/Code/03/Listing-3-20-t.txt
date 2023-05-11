@@ -1,5 +1,0 @@
-LocalDateTime dateTime;
-.
-.
-.
-LocalDate dateOnly = dateTime.toLocalDate();

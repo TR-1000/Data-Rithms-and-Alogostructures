@@ -1,5 +1,0 @@
-Date someDate;
-.
-.
-.
-Instant someInstant = Instant.ofEpochMilli(someDate.getTime());

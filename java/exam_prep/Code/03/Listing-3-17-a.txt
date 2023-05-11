@@ -1,4 +1,0 @@
-long matchCount = items.stream().
-        filter(e -> (e.startsWith(prefix))).
-        filter(e -> (e.endsWith(suffix))).
-        count();

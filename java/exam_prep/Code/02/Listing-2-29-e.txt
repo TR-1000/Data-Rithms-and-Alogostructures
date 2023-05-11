@@ -1,8 +1,0 @@
-resourceLock.lock();
-try {
-  doSomething();
-  resourceLock.unlock();
-}
-catch (Exception e) {
-  resourceLock.unlock();
-}

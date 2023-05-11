@@ -1,6 +1,0 @@
-javax.swing.JButton button;
-.
-.
-.
-button.addActionListener(actionEvent ->
-        System.out.println(actionEvent.getActionCommand()));

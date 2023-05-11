@@ -1,2 +1,0 @@
-boolean success = updateDatabase(parms);
-assert success;
