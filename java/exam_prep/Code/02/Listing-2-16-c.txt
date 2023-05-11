@@ -1,4 +1,0 @@
-public String toString() {
-  return "MailMessage[sender=" + sender + ", recipient=" + recipient +
-         ", messageText=" + messageText + "]";
-}

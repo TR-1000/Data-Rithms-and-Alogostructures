@@ -1,2 +1,0 @@
-System.out.println(Year.isLeap(2015)
-        ? "It is a leap year" : "It's not a leap year");

@@ -1,6 +1,0 @@
-java.util.concurrent.locks.Lock resourceLock;
-.
-.
-.
-resourceLock.lock();
-doSomething();

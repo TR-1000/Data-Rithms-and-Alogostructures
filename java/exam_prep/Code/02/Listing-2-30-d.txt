@@ -1,5 +1,0 @@
-boolean systemValid;
-.
-.
-.
-assert systemValid;

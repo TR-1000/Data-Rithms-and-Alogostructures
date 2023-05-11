@@ -1,9 +1,0 @@
-RenderableImage image;
-.
-.
-.
-PrintService service = PrintServiceLookup.lookupDefaultPrintService();
-DocPrintJob job = service.createPrintJob();
-DocFlavor flavor = DocFlavor.SERVICE_FORMATTED.RENDERABLE_IMAGE;
-SimpleDoc doc = new SimpleDoc(image, flavor, null);
-job.print(doc, null);

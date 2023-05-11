@@ -1,1 +1,0 @@
-TicketType type = TicketType.TYPE_COACH;

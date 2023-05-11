@@ -1,1 +1,0 @@
-public void  doSomething(String... firstList, int... secondList);

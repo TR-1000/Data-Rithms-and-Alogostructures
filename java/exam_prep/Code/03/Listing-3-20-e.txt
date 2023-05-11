@@ -1,2 +1,0 @@
-ZonedDateTime currentTimestamp = ZonedDateTime.now();
-LocalDate currentDate = LocalDate.now();

@@ -1,2 +1,0 @@
-public void attemptLogon(String userid, String password)
-    throws InvalidUseridException, InvalidPasswordException {

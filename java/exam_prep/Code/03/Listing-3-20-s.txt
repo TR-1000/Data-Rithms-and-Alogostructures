@@ -1,3 +1,0 @@
-Period ninetyDays = Period.ofDays(90);
-LocalDate currentDate = LocalDate.now();
-LocalDate ninetyDaysFromToday = currentDate.plus(ninetyDays);

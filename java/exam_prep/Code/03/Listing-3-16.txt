@@ -1,3 +1,0 @@
-List<String> filteredList = items.stream().
-        filter(e -> (e.startsWith(prefix))).
-        collect(Collectors.toList());
