@@ -1,7 +1,6 @@
-package compare_sort;
+package comparesort;
 
 import java.util.*;
-import java.util.Map.Entry;
 
 public class ParalledArrays {
 	

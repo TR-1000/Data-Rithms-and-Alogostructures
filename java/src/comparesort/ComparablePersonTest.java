@@ -1,4 +1,4 @@
-package compare_sort;
+package comparesort;
 import java.util.Arrays;
 
 class ComparablePerson implements Comparable<ComparablePerson> {

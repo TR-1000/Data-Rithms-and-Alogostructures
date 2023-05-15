@@ -1,4 +1,4 @@
-package compare_sort;
+package comparesort;
 import java.util.*;
 
 class Student implements Comparable<Student> {

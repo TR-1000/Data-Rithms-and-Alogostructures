@@ -1,4 +1,4 @@
-package compare_sort;
+package comparesort;
 import java.util.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
