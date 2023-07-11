@@ -1,7 +1,3 @@
-/* 
-Activity: correct simple errors in loops with missing braces (External resource) 
-*/ 
-
 #include <stdio.h>
 
 int main(void) {
@@ -14,11 +10,7 @@ int main(void) {
     printf("+\n");
 
     for (i = 0; i < 3; i++)
-        printf("| o | X | o | X | o | X |");
-        printf("\n");
-        printf("| X | o | X | o | X | o |");
-        printf("\n");
-
+        printf("| o | X | o | X | o | X |\n| X | o | X | o | X | o |\n");
     printf("+");
     for (i = 0; i < 23; i++)
         printf("-");
@@ -26,15 +18,3 @@ int main(void) {
 
     return(0);
 }
-
-/*
-The desired output is:
-+-----------------------+                                                       
-| o | X | o | X | o | X |                                                       
-| X | o | X | o | X | o |                                                       
-| o | X | o | X | o | X |                                                       
-| X | o | X | o | X | o |                                                       
-| o | X | o | X | o | X |                                                       
-| X | o | X | o | X | o |                                                       
-+-----------------------+ 
-*/
